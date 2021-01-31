@@ -2,11 +2,14 @@
 #include <stdlib.h>
 
 
-void main (void)
+int main (void)
 {
-    float fahrenheit, celsius;
-    scanf ("%f", &celsius);
+    float fahrenheit = 0, celsius = 0;
 
-    fahrenheit = (celsius * 9/5) + 32;
-    printf("%.1f", fahrenheit);
+    for(celsius; celsius <= 300; celsius+= 20)
+    {
+        fahrenheit = (celsius * 9/5) + 32;
+        printf("C%.0f      |F%.3f\n", celsius, fahrenheit);
+    }
+
 }
